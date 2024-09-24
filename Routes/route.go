@@ -16,12 +16,12 @@ func (app *Routes) CollectRoutes(e *echo.Echo) {
 	// Mengelompokkan route untuk kursus
 	course := e.Group("/courses")
 	course.POST("/", app.Controller.CreateCourse)
-	course.GET("/", app.Controller.ListCourses)
-	course.PUT("/:id", app.Controller.UpdateCourse)
-	course.DELETE("/:id", app.Controller.DeleteCourse)
-
-	user := e.Group("/user")
-	user.POST("/register", app.Controller.Register)
+	//course.GET("/", app.Controller.ListCourses)
+	//course.PUT("/:id", app.Controller.UpdateCourse)
+	//course.DELETE("/:id", app.Controller.DeleteCourse)
+	//
+	//user := e.Group("/user")
+	//user.POST("/register", app.Controller.Register)
 
 	appRoutes.Start(":3000")
 }

@@ -3,6 +3,7 @@ package Config
 import (
 	"bytes"
 	"database/sql"
+	"fmt"
 	"log"
 	"os"
 	"path"
@@ -52,6 +53,7 @@ func migrate(db *sql.DB) (err error) {
 	tx, err := db.Begin()
 	var queryAll []string
 	query, _ := os.ReadFile(dirPathMigration())
+	fmt.Println("QUERY: ", string(query))
 	sqlQuery := string(query)
 	queryAll = strings.Split(sqlQuery, ";")
 	for _, v := range queryAll {

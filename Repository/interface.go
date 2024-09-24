@@ -1,11 +1,15 @@
 package Repository
 
-import "kursus-online/Repository/Product/"
+import (
+	"kursus-online/Repository/Course"
+)
 
 type Repository struct {
-	Product Product.RepositoryProduct
+	Course Course.RepositoryCourse
+	//Product Product.RepositoryProduct
 }
 
 var ApplicationRepository = Repository{
-	Product: Product.NewRepository(),
+	Course: Course.NewRepository(),
+	//Product: Product.NewRepository(),
 }

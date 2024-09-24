@@ -1,20 +1,11 @@
-package Controller
+package Product
 
 import (
 	"context"
-	"database/sql"
-	"database/sql/driver"
-	"kursus-online/Config"
-	"kursus-online/Controller/Dto/Request"
-	"kursus-online/Controller/Dto/Response"
-	"log"
-	"testing"
-	"time"
-
-	"github.com/DATA-DOG/go-sqlmock"
 	_ "github.com/lib/pq"
 	uuid "github.com/satori/go.uuid"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func ConnectionMock(t *testing.T) {

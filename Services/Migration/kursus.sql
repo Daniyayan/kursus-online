@@ -2,7 +2,6 @@ CREATE DATABASE IF NOT EXISTS kursus;
 
 USE kursus;
 
-
 CREATE TABLE IF NOT EXISTS `user` (
     `id_user` int(3) NOT NULL,
     `username` varchar(50) NOT NULL,
@@ -36,9 +35,4 @@ CREATE TABLE IF NOT EXISTS `register` (
     `status` VARCHAR(50),
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-)ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-
-
-
-
+)ENGINE=InnoDB DEFAULT CHARSET=latin1
