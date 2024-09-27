@@ -1,8 +1,7 @@
 package Controller
 
 type controllerInterface interface {
-	CourseInterface
-	UserInterface
+	CoursusInterface
 }
 
 type Controller struct {

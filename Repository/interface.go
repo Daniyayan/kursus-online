@@ -1,15 +1,21 @@
 package Repository
 
 import (
-	"kursus-online/Repository/Course"
+	"kursus-online/Repository/Coursus"
+	"kursus-online/Repository/Register"
+	Mapel "kursus-online/Repository/mapel"
 )
 
 type Repository struct {
-	Course Course.RepositoryCourse
+	Coursus  Coursus.RepositoryCoursus
+	Mapel    Mapel.RepositoryMapel
+	Register Register.RepositoryRegister
 	//Product Product.RepositoryProduct
 }
 
 var ApplicationRepository = Repository{
-	Course: Course.NewRepository(),
+	Coursus:  Coursus.NewRepository(),
+	Mapel:    Mapel.NewRepository(),
+	Register: Register.NewRepository(),
 	//Product: Product.NewRepository(),
 }
