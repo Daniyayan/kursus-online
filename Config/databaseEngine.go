@@ -42,11 +42,11 @@ func (c ConfigSettingSql) InitDB() {
 	SqlConnection = Connection
 
 	//run migration Table
-	err = migrate(SqlConnection)
-	if err != nil {
-		panic(err.Error())
-		return
-	}
+	//err = migrate(SqlConnection)
+	//if err != nil {
+	//	panic(err.Error())
+	//	return
+	//}
 }
 
 func migrate(db *sql.DB) (err error) {
